@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --cor-primaria: #000;
+    --cor-secundaria: #0099ff;
+    --cor-chat-resposta: #333;
+    --cor-paragrafo: #ffffff;
+    --cor-txt-btn: #f6f6f6;
+    --cor-cx-resposta: #c9c9c9;
+    --cor-hover-btn: #5cbeff;
+    --cor-sombra: rgba(247, 247, 247, 0.329);
+    --cor-loading1: #e6f7ff;
+    --cor-loading2: #91d5ff;
+    --cor-error1: #fff1f0;
+    --cor-error2: #ffa39e;
+    --fonte-primaria: "Roboto", sans-serif;
+    --fonte-secundaria: "Ubuntu", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-secundaria);
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 43.75rem;
+    height: 85vh;
+    background-color: var(--cor-primaria);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px var(--cor-sombra);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--cor-secundaria);
+    gap: 1.875rem;
+}
+
+.chat-header {
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    padding: 1.25rem;
+    text-align: center;
+    border-bottom: 3px solid var(--cor-secundaria);
+}
+
+.chat-header h1 {
+    color: var(--cor-paragrafo);
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3125rem;
+}
+
+.chat-resposta-container {
+    flex-grow: 1;
+    background-color: var(--cor-cx-resposta);
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin: 0 1.25rem;
+}
+
+.chat-resposta-scroller {
+    height: 100%;
+    overflow-y: auto;
+    padding: 1.25rem;
+}
+
+.chat-resposta-scroller p {
+    line-height: 1.6;
+    color: var(--cor-chat-resposta);
+    margin-bottom: 1em;
+}
+
+.loading p,
+.error p {
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
+    margin-top: 0.625rem;
+}
+
+.loading p {
+    background-color: var(--cor-loading1);
+    border: 1px solid var(--cor-loading2);
+}
+
+.error p {
+    background-color: var(--cor-error1);
+    border: 1px solid var(--cor-error2);
+}
+
+.chat-footer {
+    padding: 1.25rem;
+    background-color: transparent;
+}
+
+#pergunta-form {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+#pergunta-usuario {
+    flex-grow: 1;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    resize: none;
+    height: 5.625rem;
+}
+
+#pergunta-form button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-txt-btn);
+    border: none;
+    border-radius: 0.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pergunta-form button:hover {
+    background-color: var(--cor-hover-btn);
+}
+
+@media (max-width: 37.5rem) {
+    body {
+        padding: 0;
+    }
+
+    .chat-container {
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+}

@@ -1,0 +1,19 @@
+    # --- Ambiente Virtual ---
+    # Ignora a pasta do ambiente virtual, que é específica para cada máquina.
+    .venv/
+
+    # --- Arquivos de Configuração Sensíveis ---
+    # Ignora o arquivo que contém sua chave de API secreta.
+    .env
+
+    # --- Base de Conhecimento (Conteúdo Protegido) ---
+    # Ignora todos os arquivos PDF na pasta do projeto.
+    *.pdf
+
+    # --- Índice Gerado ---
+    # Ignora a pasta do índice FAISS, pois ela é gerada a partir dos PDFs.
+    faiss_index/
+
+    # --- Arquivos de Cache do Python ---
+    # Ignora as pastas de cache que o Python cria automaticamente.
+    __pycache__/
